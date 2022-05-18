@@ -1,0 +1,56 @@
+html {
+  font-size: 87.5%;
+}
+
+strong {
+  font-weight: 600;
+}
+
+label {
+  margin-bottom: 0;
+}
+
+.visually-hidden:not(:focus, :focus-within) {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+.stack > * + *,
+.flow > * + * {
+  margin-top: var(--spacing, 1rem) !important;
+}
+
+.stack-xs > * + *,
+.flow-xs > * + * {
+  --spacing: 0.5rem;
+}
+
+.stack-sm > * + *,
+.flow-sm > * + * {
+  --spacing: 0.75rem;
+}
+
+.stack-lg > * + *,
+.flow-lg > * + * {
+  --spacing: 1.5rem;
+}
+
+.stack-xl > * + *,
+.flow-xl > * + * {
+  --spacing: 2rem;
+}
+
+.stack-xxl > * + *,
+.flow-xxl > * + * {
+  --spacing: 3rem;
+}
+
+.app-view {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.scroll-view {
+  height: 100%;
+  overflow-y: auto;
+}

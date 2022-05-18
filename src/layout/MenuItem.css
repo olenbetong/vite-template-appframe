@@ -1,0 +1,60 @@
+.AppMenuItem-root .MuiListItemText-primary {
+  color: rgb(0 0 0 / 0.87);
+  font-weight: 500;
+}
+
+.AppMenuItem-root.MuiListItem-root {
+  border-radius: 0.25rem;
+  overflow: hidden;
+
+  margin: 0.5rem;
+  padding: 0.5rem 0.5rem;
+  width: initial;
+}
+
+.AppMenuItem-root:before {
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 30ms linear, background-color 30ms linear;
+
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.AppMenuItem-root:hover,
+.AppMenuItem-root:focus,
+.AppMenuItem-root:active {
+  text-decoration: none;
+}
+
+.AppMenuItem-root:hover:before {
+  opacity: 0.04;
+}
+
+.AppMenuItem-root:active:before {
+  opacity: 0.16;
+}
+
+.AppMenuItem-root.active:before,
+.AppMenuItem-root.active:hover:before {
+  background-color: var(--brand-primary);
+  opacity: 0.16;
+}
+
+.AppMenuItem-root.active:hover:before {
+  opacity: 0.2;
+}
+
+.AppMenuItem-root.active:active:before {
+  opacity: 0.24;
+}
+
+.AppMenuItem-root.active .MuiListItemText-primary,
+.AppMenuItem-root.active .MuiListItemIcon-root {
+  color: var(--brand-primary);
+}

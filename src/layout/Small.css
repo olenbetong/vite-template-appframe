@@ -1,0 +1,13 @@
+.partner-nav {
+  color: white;
+}
+
+.LayoutSmall-toggle {
+  height: var(--navbar-height);
+  width: var(--navbar-height);
+}
+
+.LayoutSmall-drawer {
+  max-width: 90%;
+  width: 20rem;
+}
