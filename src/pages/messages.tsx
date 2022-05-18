@@ -1,6 +1,5 @@
-import { PageContainer } from "components/PageContainer";
-import PageTitle from "components/PageTitle";
-
+import { PageContainer } from "@/components/PageContainer";
+import PageTitle from "@/components/PageTitle";
 import { Typography } from "@mui/material";
 
 export default function MessagesPage() {

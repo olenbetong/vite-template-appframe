@@ -1,13 +1,13 @@
-import { ARTICLE_ID, ARTICLE_TITLE } from "config";
-import LargeLayout from "layout/Large";
-import SmallLayout from "layout/Small";
-import SamplePage from "pages";
-import DepartmentsPage from "pages/departments";
-import MessagesPage from "pages/messages";
 import { Helmet } from "react-helmet";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import theme from "theme";
 
+import { ARTICLE_ID, ARTICLE_TITLE } from "@/config";
+import LargeLayout from "@/layout/Large";
+import SmallLayout from "@/layout/Small";
+import SamplePage from "@/pages";
+import DepartmentsPage from "@/pages/departments";
+import MessagesPage from "@/pages/messages";
 import { useMediaQuery } from "@mui/material";
 
 function Layout({ children }) {

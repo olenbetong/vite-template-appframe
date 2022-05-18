@@ -1,11 +1,11 @@
 import "./Large.css";
 
-import ErrorFallback from "components/ErrorAlertFallback";
-import LinearProgress from "components/LinearProgressAbsolute";
 import { ARTICLE_TITLE } from "config";
 import { Suspense, useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 
+import ErrorFallback from "@/components/ErrorAlertFallback";
+import LinearProgress from "@/components/LinearProgressAbsolute";
 import { ArrowBack, Menu as MenuIcon } from "@mui/icons-material";
 import {
   AppBar,
@@ -41,9 +41,7 @@ export default function Layout({ children }) {
           >
             {open ? <ArrowBack /> : <MenuIcon />}
           </IconButton>
-          <Typography variant="h1">
-            {ARTICLE_TITLE}
-          </Typography>
+          <Typography variant="h1">{ARTICLE_TITLE}</Typography>
         </Toolbar>
       </AppBar>
 

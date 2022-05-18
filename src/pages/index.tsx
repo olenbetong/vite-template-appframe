@@ -1,4 +1,4 @@
-import { PageContainer } from "components/PageContainer";
+import { PageContainer } from "@/components/PageContainer";
 import { Link } from "react-router-dom";
 
 import styled from "@emotion/styled";
