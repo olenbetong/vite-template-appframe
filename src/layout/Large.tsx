@@ -1,11 +1,11 @@
 import "./Large.css";
 
-import { ARTICLE_TITLE } from "config";
 import { Suspense, useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 
 import ErrorFallback from "@/components/ErrorAlertFallback";
 import LinearProgress from "@/components/LinearProgressAbsolute";
+import { ARTICLE_TITLE } from "@/config";
 import { ArrowBack, Menu as MenuIcon } from "@mui/icons-material";
 import {
   AppBar,

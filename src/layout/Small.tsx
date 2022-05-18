@@ -1,9 +1,9 @@
 import "./Small.css";
 
-import { ARTICLE_TITLE } from "config";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
+import { ARTICLE_TITLE } from "@/config";
 import MenuIcon from "@mui/icons-material/Menu";
 import { AppBar, Drawer, IconButton, Toolbar, Typography } from "@mui/material";
 
@@ -35,9 +35,7 @@ export default function Layout({ children }) {
       <AppBar color="primary" position="sticky" className="LayoutSmall-appBar">
         <Toolbar>
           <Toggle onToggle={() => setDrawerOpen((current) => !current)} />
-          <Typography variant="h1">
-            {ARTICLE_TITLE}
-          </Typography>
+          <Typography variant="h1">{ARTICLE_TITLE}</Typography>
         </Toolbar>
       </AppBar>
       <Drawer
