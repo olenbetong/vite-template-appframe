@@ -3,9 +3,9 @@
     "dependencies": {
       "@emotion/react": "^11.9.0",
       "@emotion/styled": "^11.8.1",
-      "@mui/icons-material": "^5.6.0",
+      "@mui/icons-material": "^5.8.0",
       "@mui/lab": "^5.0.0-alpha.63",
-      "@mui/material": "^5.6.0",
+      "@mui/material": "^5.8.0",
       "@olenbetong/common": "^1.0.0",
       "@olenbetong/data-object": "^1.0.0-alpha.65",
       "@olenbetong/react-data-object-connect": "^5.2.7",
@@ -26,13 +26,16 @@
       "@types/react": "^18.0.0",
       "@types/react-dom": "^18.0.0",
       "@types/react-helmet": "^6.1.5",
+      "@vitejs/plugin-react": "^1.3.2",
+      "express": "^4.18.1",
       "sass": "^1.45.2",
-      "typescript": "^4.5.4"
+      "typescript": "^4.5.4",
+      "vite": "^2.9.9"
     },
     "scripts": {
-      "deploy": "af cra deploy",
-      "publish-to-prod": "af cra publish",
-      "generate-types": "af cra generate-types"
+      "start": "af cra generate-types && node ./server.mjs",
+      "build": "tsc && vite build",
+      "deploy": "af cra deploy"
     },
     "appframe": {
       "article": {
