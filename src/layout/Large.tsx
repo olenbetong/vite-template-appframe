@@ -3,9 +3,9 @@ import "./Large.css";
 import { Suspense, useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 
-import ErrorFallback from "@/components/ErrorAlertFallback";
-import LinearProgress from "@/components/LinearProgressAbsolute";
-import { ARTICLE_TITLE } from "@/config";
+import ErrorFallback from "~/components/ErrorAlertFallback";
+import LinearProgress from "~/components/LinearProgressAbsolute";
+import { ARTICLE_TITLE } from "~/config";
 import { ArrowBack, Menu as MenuIcon } from "@mui/icons-material";
 import {
   AppBar,
@@ -15,7 +15,7 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import { getLocalizedString } from "@olenbetong/common";
+import { getLocalizedString } from "@olenbetong/appframe-core";
 
 import Menu from "./Menu";
 

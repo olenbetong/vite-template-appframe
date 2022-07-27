@@ -1,8 +1,8 @@
 import * as React from "react";
-import { Button } from "@mui/material";
-import { Alert, AlertTitle } from "@mui/material";
+
 import { AlertProps } from "@mui/lab";
-import { getLocalizedString } from "@olenbetong/common";
+import { Alert, AlertTitle, Button } from "@mui/material";
+import { getLocalizedString } from "@olenbetong/appframe-core";
 
 export type ErrorAlertFallbackProps = AlertProps & {
   error: any;

@@ -2,8 +2,8 @@ import "./Small.css";
 
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { ARTICLE_TITLE } from "~/config";
 
-import { ARTICLE_TITLE } from "@/config";
 import MenuIcon from "@mui/icons-material/Menu";
 import { AppBar, Drawer, IconButton, Toolbar, Typography } from "@mui/material";
 

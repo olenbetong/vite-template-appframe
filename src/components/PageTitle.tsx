@@ -1,10 +1,11 @@
+import { createPortal } from "react-dom";
+
 import {
   Theme,
   Typography,
   TypographyProps,
   useMediaQuery,
 } from "@mui/material";
-import { createPortal } from "react-dom";
 
 export default function PageTitle(props: TypographyProps) {
   let isSmall = useMediaQuery((t: Theme) => t.breakpoints.down("lg"));

@@ -1,1 +1,1 @@
-import {  } from "@olenbetong/data-object";
+import {} from "@olenbetong/appframe-data";

@@ -1,7 +1,8 @@
 import "./PageContainer.scss";
 
-import { Container, ContainerProps } from "@mui/material";
 import clsx from "clsx";
+
+import { Container, ContainerProps } from "@mui/material";
 
 export function PageContainer({
   fullHeight,

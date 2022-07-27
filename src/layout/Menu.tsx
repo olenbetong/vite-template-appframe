@@ -7,7 +7,7 @@ import { Build, Message } from "@mui/icons-material";
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import { Box, List, ListSubheader as MuiListSubheader } from "@mui/material";
 import { SxProps } from "@mui/system";
-import { getLocalizedString } from "@olenbetong/common";
+import { getLocalizedString } from "@olenbetong/appframe-core";
 
 const ListSubheader = styled(MuiListSubheader)`
   margin-block-start: 0.75rem;

@@ -1,8 +1,8 @@
 import "./styles/common.css";
 
 import { createRoot } from "react-dom/client";
+import { ARTICLE_ID } from "~/config";
 
-import { ARTICLE_ID } from "@/config";
 import { StyledEngineProvider, ThemeProvider } from "@mui/material";
 
 import App from "./App";
