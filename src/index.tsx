@@ -1,11 +1,12 @@
 import "./styles/common.css";
 
 import { createRoot } from "react-dom/client";
-import { ARTICLE_ID } from "~/config";
 
 import { StyledEngineProvider, ThemeProvider } from "@mui/material";
+import { AppErrorBoundary } from "@olenbetong/appframe-mui";
 
 import App from "./App";
+import { ARTICLE_ID } from "./config";
 import theme from "./theme";
 
 if (process.env.NODE_ENV === "development") {
@@ -18,7 +19,9 @@ const root = createRoot(document.getElementById("root") as Element);
 root.render(
   <StyledEngineProvider injectFirst>
     <ThemeProvider theme={theme}>
-      <App />
+      <AppErrorBoundary>
+        <App />
+      </AppErrorBoundary>
     </ThemeProvider>
   </StyledEngineProvider>
 );

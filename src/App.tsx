@@ -1,21 +1,13 @@
 import { Helmet } from "react-helmet";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import theme from "theme";
 import { ARTICLE_ID, ARTICLE_TITLE } from "~/config";
-import LargeLayout from "~/layout/Large";
-import SmallLayout from "~/layout/Small";
 import SamplePage from "~/pages";
 import DepartmentsPage from "~/pages/departments";
 import MessagesPage from "~/pages/messages";
 
-import { useMediaQuery } from "@mui/material";
+import { AppLayout } from "@olenbetong/appframe-mui";
 
-function Layout({ children }) {
-  let isSmall = useMediaQuery<typeof theme>((t) => t.breakpoints.down("lg"));
-  let Component = isSmall ? SmallLayout : LargeLayout;
-
-  return <Component>{children}</Component>;
-}
+import { ApplicationMenu } from "./AppMenu";
 
 export default function App() {
   return (
@@ -23,13 +15,13 @@ export default function App() {
       <Helmet>
         <title>{ARTICLE_TITLE}</title>
       </Helmet>
-      <Layout>
+      <AppLayout menu={<ApplicationMenu />}>
         <Routes>
           <Route element={<DepartmentsPage />} path={`/departments`} />
           <Route element={<MessagesPage />} path={`/messages`} />
           <Route element={<SamplePage />} path="*" />
         </Routes>
-      </Layout>
+      </AppLayout>
     </Router>
   );
 }

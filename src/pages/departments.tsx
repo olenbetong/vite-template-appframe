@@ -1,6 +1,7 @@
-import { PageContainer } from "~/components/PageContainer";
 import PageTitle from "~/components/PageTitle";
+
 import { Typography } from "@mui/material";
+import { PageContainer } from "@olenbetong/appframe-mui";
 
 export default function DepartmentsPage() {
   return (

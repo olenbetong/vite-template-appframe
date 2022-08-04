@@ -1,8 +1,8 @@
-import { PageContainer } from "~/components/PageContainer";
 import { Link } from "react-router-dom";
 
 import styled from "@emotion/styled";
 import { Link as MuiLink, Typography } from "@mui/material";
+import { PageContainer } from "@olenbetong/appframe-mui";
 
 const StyledLogo = styled.svg`
   animation: App-logo-spin infinite 20s linear;
