@@ -15,7 +15,7 @@ const ListSubheader = styled(MuiListSubheader)`
 
 export function ApplicationMenu() {
   return (
-    <AppMenu headerPrimary={ARTICLE_TITLE}>
+    <AppMenu headerPrimary={getLocalizedString(ARTICLE_TITLE)}>
       <List
         aria-labelledby="menu-firstsection-subhead"
         subheader={

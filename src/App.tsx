@@ -5,6 +5,7 @@ import SamplePage from "~/pages";
 import DepartmentsPage from "~/pages/departments";
 import MessagesPage from "~/pages/messages";
 
+import { getLocalizedString } from "@olenbetong/appframe-core";
 import { AppLayout } from "@olenbetong/appframe-mui";
 
 import { ApplicationMenu } from "./AppMenu";
@@ -13,7 +14,7 @@ export default function App() {
   return (
     <Router basename={ARTICLE_ID}>
       <Helmet>
-        <title>{ARTICLE_TITLE}</title>
+        <title>{getLocalizedString(ARTICLE_TITLE)}</title>
       </Helmet>
       <AppLayout menu={<ApplicationMenu />}>
         <Routes>
