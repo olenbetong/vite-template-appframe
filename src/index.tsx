@@ -3,11 +3,10 @@ import "./styles/common.css";
 import { createRoot } from "react-dom/client";
 
 import { StyledEngineProvider, ThemeProvider } from "@mui/material";
-import { AppErrorBoundary } from "@olenbetong/appframe-mui";
+import { AppErrorBoundary, theme } from "@olenbetong/appframe-mui";
 
 import App from "./App";
 import { ARTICLE_ID } from "./config";
-import theme from "./theme";
 
 if (process.env.NODE_ENV === "development") {
   if (window.location.pathname === "/") {
