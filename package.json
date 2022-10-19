@@ -1,4 +1,6 @@
 {
+  "name": "article-name",
+  "version": "0.0.1",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
@@ -37,7 +39,7 @@
     "express": "^4.18.1"
   },
   "scripts": {
-    "start": "node ./server.mjs",
+    "start": "af vite generate-types && node ./server.mjs",
     "build": "tsc && vite build",
     "deploy": "af vite deploy"
   },
