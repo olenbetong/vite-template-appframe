@@ -5,12 +5,12 @@
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.9",
-    "@mui/lab": "^5.0.0-alpha.101",
-    "@mui/material": "^5.10.10",
+    "@mui/lab": "^5.0.0-alpha.105",
+    "@mui/material": "^5.10.11",
     "@olenbetong/appframe-core": "^2.0.4",
-    "@olenbetong/appframe-data": "^0.2.3",
-    "@olenbetong/appframe-mui": "^0.24.3",
-    "@olenbetong/appframe-react": "^1.5.11",
+    "@olenbetong/appframe-data": "^0.4.0",
+    "@olenbetong/appframe-mui": "^0.25.4",
+    "@olenbetong/appframe-react": "^1.7.0",
     "d3-array": "^3.2.0",
     "date-fns": "^2.29.3",
     "history": "^5.3.0",
@@ -22,21 +22,21 @@
     "react-router-dom": "^6.4.2"
   },
   "devDependencies": {
-    "@olenbetong/appframe-cli": "^3.38.0",
-    "@olenbetong/appframe-vite": "^2.2.5",
+    "@olenbetong/appframe-cli": "^3.38.1",
+    "@olenbetong/appframe-vite": "^2.2.11",
     "@olenbetong/eslint-config": "^1.0.3",
-    "@types/node": "^18.11.2",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.5",
+    "@types/node": "^18.11.5",
+    "@types/react": "^18.0.23",
+    "@types/react-dom": "^18.0.7",
     "@types/react-helmet": "^6.1.5",
     "@vitejs/plugin-react": "^2.1.0",
-    "eslint": "^8.25.0",
+    "eslint": "^8.26.0",
     "sass": "^1.55.0",
     "typescript": "^4.8.4",
     "vite": "^3.1.8"
   },
   "optionalDependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.2"
   },
   "scripts": {
     "start": "af vite generate-types && node ./server.mjs",
