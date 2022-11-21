@@ -1,12 +1,15 @@
 import "./styles/common.css";
 
 import { createRoot } from "react-dom/client";
+import { Helmet } from "react-helmet";
+import { RouterProvider } from "react-router";
 
 import { StyledEngineProvider, ThemeProvider } from "@mui/material";
+import { getLocalizedString } from "@olenbetong/appframe-core";
 import { AppErrorBoundary, theme } from "@olenbetong/appframe-mui";
 
-import App from "./App";
-import { ARTICLE_ID } from "./config";
+import { ARTICLE_ID, ARTICLE_TITLE } from "./config";
+import { router } from "./router";
 
 if (process.env.NODE_ENV === "development") {
   if (window.location.pathname === "/") {
@@ -19,7 +22,10 @@ root.render(
   <StyledEngineProvider injectFirst>
     <ThemeProvider theme={theme}>
       <AppErrorBoundary>
-        <App />
+        <Helmet>
+          <title>{getLocalizedString(ARTICLE_TITLE)}</title>
+        </Helmet>
+        <RouterProvider router={router} />
       </AppErrorBoundary>
     </ThemeProvider>
   </StyledEngineProvider>
