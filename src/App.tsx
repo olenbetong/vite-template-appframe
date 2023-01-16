@@ -30,7 +30,7 @@ export const router = createBrowserRouter(
 		{
 			path: "/",
 			element: (
-				<AppLayout menu={<ApplicationMenu />}>
+				<AppLayout menu={<ApplicationMenu />} title={getLocalizedString(ARTICLE_TITLE)}>
 					<Outlet />
 				</AppLayout>
 			),
@@ -47,7 +47,7 @@ export const router = createBrowserRouter(
 
 export function ApplicationMenu() {
 	return (
-		<AppMenu headerPrimary={getLocalizedString(ARTICLE_TITLE)}>
+		<AppMenu>
 			<List
 				aria-labelledby="menu-firstsection-subhead"
 				subheader={
