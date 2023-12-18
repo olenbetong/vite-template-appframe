@@ -1,7 +1,5 @@
 import { Typography } from "@mui/material";
-import { PageContainer } from "@olenbetong/appframe-mui";
-
-import PageTitle from "~/components/PageTitle";
+import { PageContainer, PageTitle } from "@olenbetong/appframe-mui";
 
 export default function MessagesPage() {
 	return (
