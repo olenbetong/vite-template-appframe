@@ -3,14 +3,18 @@ import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import MessageIcon from "@mui/icons-material/Message";
 import { List, Typography } from "@mui/material";
 import { getLocalizedString } from "@olenbetong/appframe-core";
-import { AppLayout, AppMenu, AppMenuItem, AppMenuSubheader, PageContainer } from "@olenbetong/appframe-mui";
+import {
+	AppLayout,
+	AppMenu,
+	AppMenuItem,
+	AppMenuSubheader,
+	LinearProgress,
+	PageContainer,
+} from "@olenbetong/appframe-mui";
 
-import { Outlet, RouterProvider, createBrowserRouter, useRouteError } from "react-router-dom";
+import { Outlet, RouterProvider, createBrowserRouter, useNavigation, useRouteError } from "react-router-dom";
 
 import { ARTICLE_ID, ARTICLE_TITLE } from "~/config";
-import SamplePage from "~/pages";
-import DepartmentsPage from "~/pages/departments";
-import MessagesPage from "~/pages/messages";
 
 function ErrorElement() {
 	let error = useRouteError() as any;
@@ -25,24 +29,31 @@ function ErrorElement() {
 	);
 }
 
+function NavigationIndicator() {
+	let { state } = useNavigation();
+
+	return state === "loading" ? <LinearProgress /> : null;
+}
+
 export const router = createBrowserRouter(
 	[
 		{
 			path: "/",
 			element: (
 				<AppLayout menu={<ApplicationMenu />} title={getLocalizedString(ARTICLE_TITLE)}>
+					<NavigationIndicator />
 					<Outlet />
 				</AppLayout>
 			),
 			errorElement: <ErrorElement />,
 			children: [
-				{ path: "departments", element: <DepartmentsPage /> },
-				{ path: "messages", element: <MessagesPage /> },
-				{ index: true, element: <SamplePage /> },
+				{ path: "departments", lazy: () => import("./pages/departments") },
+				{ path: "messages", lazy: () => import("./pages/messages") },
+				{ index: true, lazy: () => import("./pages") },
 			],
 		},
 	],
-	{ basename: "/" + ARTICLE_ID }
+	{ basename: "/" + ARTICLE_ID },
 );
 
 export function ApplicationMenu() {

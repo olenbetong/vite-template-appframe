@@ -1,9 +1,17 @@
 import { Typography } from "@mui/material";
+import { getLocalizedString } from "@olenbetong/appframe-core";
 import { PageContainer, PageTitle } from "@olenbetong/appframe-mui";
 
-export default function MessagesPage() {
+import { Helmet } from "react-helmet";
+
+export const Component = MessagesPage;
+
+export function MessagesPage() {
 	return (
 		<PageContainer className="flow flow-lg">
+			<Helmet>
+				<title>{getLocalizedString("Messages")}</title>
+			</Helmet>
 			<PageTitle>Messages</PageTitle>
 			<Typography fontSize="1.5rem">A page for messages</Typography>
 		</PageContainer>
