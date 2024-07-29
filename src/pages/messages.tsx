@@ -4,9 +4,7 @@ import { PageContainer, PageTitle } from "@olenbetong/appframe-mui";
 
 import { Helmet } from "react-helmet";
 
-export const Component = MessagesPage;
-
-export function MessagesPage() {
+export function Component() {
 	return (
 		<PageContainer className="flow flow-lg">
 			<Helmet>

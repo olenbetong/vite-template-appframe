@@ -49,9 +49,7 @@ const LogoContainer = styled.div`
 	margin-block-end: 5rem;
 `;
 
-export const Component = SamplePage;
-
-export function SamplePage() {
+export function Component() {
 	return (
 		<PageContainer maxWidth="md">
 			<LogoContainer>

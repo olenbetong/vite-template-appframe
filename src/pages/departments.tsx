@@ -1,9 +1,7 @@
 import { Typography } from "@mui/material";
 import { PageContainer, PageTitle } from "@olenbetong/appframe-mui";
 
-export const Component = DepartmentsPage;
-
-export function DepartmentsPage() {
+export function Component() {
 	return (
 		<PageContainer className="flow flow-lg">
 			<PageTitle>Departments</PageTitle>
