@@ -10,5 +10,5 @@ export default defineConfig(() => ({
 	optimizeDeps: {
 		esbuildOptions: { target: ["es2022"] },
 	},
-	build: { target: ["chrome105", "safari15"] },
+	build: { target: ["chrome105", "safari16"] },
 }));
