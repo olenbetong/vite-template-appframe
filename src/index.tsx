@@ -5,7 +5,6 @@ import { getLocalizedString } from "@olenbetong/appframe-core";
 import { AppErrorBoundary, theme } from "@olenbetong/appframe-mui";
 
 import { createRoot } from "react-dom/client";
-import { Helmet } from "react-helmet";
 
 import App from "./App";
 import { ARTICLE_ID, ARTICLE_TITLE } from "./config";
@@ -21,11 +20,9 @@ root.render(
 	<StyledEngineProvider injectFirst>
 		<ThemeProvider theme={theme}>
 			<AppErrorBoundary>
-				<Helmet>
-					<title>{getLocalizedString(ARTICLE_TITLE)}</title>
-				</Helmet>
+				<title>{getLocalizedString(ARTICLE_TITLE)}</title>
 				<App />
 			</AppErrorBoundary>
 		</ThemeProvider>
-	</StyledEngineProvider>
+	</StyledEngineProvider>,
 );
